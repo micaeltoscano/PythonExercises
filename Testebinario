@@ -1,16 +1,17 @@
-num_bi= " " 
+num_bi= "" 
 
 num= int(input("ditite o número a ser convertido para binario: "))
 
-while num >0: 
- if num % 2 == 0: 
-   num / 2
-   num_bi += 0
+while num > 0: 
+ 
+  if num % 2 == 0: 
+    num_bi = "0" + num_bi
+   
+  else: 
+    num_bi = "1" + num_bi
 
- else: 
-  (num - 1)/2
-  num_bi += 1
-
+  num = num//2
+ 
 print(f'{num_bi}')
     
   
