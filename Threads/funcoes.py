@@ -26,6 +26,17 @@ def quarta_metade(lista):
         #print("terceira metade funcionando")
     return max(lista_quarra_metade)    
 
+def primeiro(lista):
+    lista_primeiro = []
+    meio = len(lista)/4
+    while (meio > -1):
+        lista_primeiro.append(lista[meio])
+        meio -= 1
+        #print("primeira parte funcionando")
+    return max(lista_primeiro)
+   
+        
+
 
 
 
