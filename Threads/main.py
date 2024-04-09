@@ -7,16 +7,13 @@ import funcoes
 lista = [rd.randint(0, 1000) for n in range(1000)]
 
 #Visualização das listas criadas:
-print("Lista dos números à esquerda: ")
-funcoes.lista_esquerda(lista)
-print("Lista dos números à direita: ")
-funcoes.lista_direita(lista)
 
 #Criação da thread:
-thread1 = threading.Thread(target=funcoes.esquerda, args=(lista,))
-thread1.start()
-thread1.join()
+thread1 = threading.Thread(target=funcoes.segunda_metade, args=(lista,)).start()
+thread2 = threading.Thread(target=funcoes.terceira_metade, args=(lista,)).start()
+thread3 = threading.Thread(target=funcoes.quarta_metade, args=(lista,)).start()
 
-#Exibindo o resultado:
-print(f'''O maior valor da esquerda foi {funcoes.esquerda(lista)}
-O maior valor da direita foi {funcoes.direita(lista)}''')
+thread1.join()
+thread2.join()
+thread3.join()
+
