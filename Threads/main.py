@@ -17,3 +17,6 @@ thread1.join()
 thread2.join()
 thread3.join()
 
+#chamando a def independente:
+funções.primeiro(lista)
+
