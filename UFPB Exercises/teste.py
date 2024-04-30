@@ -1,14 +1,15 @@
-''''
-
-dic = {"lugares": [],}
-
-for n in range(1,5):
-    dic["lugares"].append(input("Digite: "))
-
-for n in dic["lugares"]:
-    print(n)
-
 '''
-num = "20"
+lista = [ [None]*2 for n in range(3) ]
 
-print(num[1])
+print(lista[0][0])
+
+for n in range(3):
+    lista[n][0] = float(input("Altura do ind: "))
+    lista[n][1] = input("Sexo do ind: ")
+
+print(lista)
+'''
+
+altura = []
+sexo = []
+
