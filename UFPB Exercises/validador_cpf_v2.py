@@ -29,15 +29,18 @@ def main():
     for m in cpf:
         if m != "." and m != "-":
             lista_cpf.append(m)
-    #Se o resto da divisão do cálculo de peso de todos os números antes do "-" for igual ao primeiro dígito após o "-"
-    if calculo(10, 9, lista_cpf) == int(cpf[12]):
-        #Se o resto da divisão do cálculo de peso de todos os números antes do último digito for igual ao último dígito
-        if calculo(11, 10, lista_cpf) == int(cpf[13]):
-            #Se todos os dígitos não forem iguais
-            if verificacao_digitos_iguais(cpf, lista_cpf):
-                print("É válido! ")
-            else:
-                print("Não é válido! ")
+    if len(lista_cpf) == 11:
+        #Se o resto da divisão do cálculo de peso de todos os números antes do "-" for igual ao primeiro dígito após o "-"
+        if calculo(10, 9, lista_cpf) == int(lista_cpf[9]):
+            #Se o resto da divisão do cálculo de peso de todos os números antes do último digito for igual ao último dígito
+            if calculo(11, 10, lista_cpf) == int(lista_cpf[10]):
+                #Se todos os dígitos não forem iguais
+                if verificacao_digitos_iguais(cpf, lista_cpf):
+                    print("É válido! ")
+                else:
+                    print("Não é válido! ")
+    else:
+        print("CPF digitado não é válido! ")
 
 if (__name__ == "__main__"):
     main()
